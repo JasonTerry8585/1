@@ -2664,9 +2664,8 @@ function get_emoji(emojip, sname) {
     "🇹🇹": ["特立尼达和多巴哥","特立尼達和多巴哥"]
   }
     str1 = JSON.stringify(Lmoji)
-aa = JSON.parse(str1)
-// bb = JSON.parse(str1.replace(/🇹🇼/g, " 🇨🇳"))
-var cnt = aa; // 只使用原始的aa，不替换国旗
+    aa = JSON.parse(str1)
+var cnt = aa; 
 var flag = 0;
 for (var key in cnt) {
     dd = cnt[key]
