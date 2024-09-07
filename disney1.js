@@ -2691,8 +2691,8 @@ function emoji_handle(servers, Pemoji) {
         if (ser0[i].indexOf("tag=") != -1) {
             var oname = ser0[i].split("tag=")[1].trim();
             var hd = ser0[i].split("tag=")[0];
-            var nname = oname;//emoji_del(oname);
-            // Code: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2, Emoji: https://emojipedia.org/flags/
+            var nname = oname;
+    
             if (Pemoji == 1) {
                 var nname = get_emoji(1, nname)[0]
             } else if (Pemoji == 2) {
