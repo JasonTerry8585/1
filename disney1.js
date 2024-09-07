@@ -2667,7 +2667,8 @@ function get_emoji(emojip, sname) {
   }
     str1 = JSON.stringify(Lmoji)
     aa = JSON.parse(str1)
-    var cnt = aa;
+    bb = JSON.parse(str1.replace(/🇹🇼/g, " 🇹🇼"))
+    var cnt = emojip ==1? aa:bb;
     var flag = 0;
     for (var key in cnt) {
         dd = cnt[key]
@@ -2691,8 +2692,8 @@ function emoji_handle(servers, Pemoji) {
         if (ser0[i].indexOf("tag=") != -1) {
             var oname = ser0[i].split("tag=")[1].trim();
             var hd = ser0[i].split("tag=")[0];
-            var nname = oname;
-    
+            var nname = oname;//emoji_del(oname);
+            // Code: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2, Emoji: https://emojipedia.org/flags/
             if (Pemoji == 1) {
                 var nname = get_emoji(1, nname)[0]
             } else if (Pemoji == 2) {
